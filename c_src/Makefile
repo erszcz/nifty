@@ -34,7 +34,7 @@ endif
 CFLAGS += -fPIC -I $(ERTS_INCLUDE_DIR) -I $(ERL_INTERFACE_INCLUDE_DIR)
 CFLAGS_CP = $(CFLAGS) `$(BASEDIR)/travis/safe-cflags.sh $(NIFTY_LLVM_CONFIG)`
 
-LDLIBS += -L $(ERL_INTERFACE_LIB_DIR) -lerl_interface -lei
+LDLIBS += -L $(ERL_INTERFACE_LIB_DIR) -lei
 LDLIBS_CP = $(LDLIBS) -lclang `$(NIFTY_LLVM_CONFIG) --ldflags`
 LDFLAGS += -shared
 
